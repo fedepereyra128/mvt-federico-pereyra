@@ -14,16 +14,9 @@ def familiares(request):
     familiar3.save()
     
     cadena_texto="familiar 1: "+ familiar1.nombre +" "+ str(familiar1.dni)
+
+  
     
     
     return render(request,"C:/Users/fede1/Desktop/mtvfederico/mvtfederico/mvtfederico/plantillas/template.html")
-
-def html1(request):
-    
-    archivo=open("C:/Users/fede1/Desktop/mtvfederico/mvtfederico/mvtfederico/plantillas/template.html")
-    template=Template(archivo.read())
-    archivo.close()
-    contexto=Context()
-    documento= template.render(contexto)
-    return HttpResponse (documento)
 

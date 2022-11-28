@@ -55,7 +55,7 @@ ROOT_URLCONF = 'mvtfederico.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["C:/Users/fede1/Desktop/mtvfederico/mvtfederico/mvtfederico/plantillas/template.html"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

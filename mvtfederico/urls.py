@@ -21,6 +21,6 @@ from App_familia.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("familiares/", familiares),
-    path("html1/", html1)
+   
 
 ]
