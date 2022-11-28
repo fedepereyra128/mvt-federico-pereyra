@@ -2,6 +2,8 @@ from django.shortcuts import render
 from .models import Familiares
 from django.http import HttpResponse
 from django.template import Template , Context 
+
+from django.shortcuts import render
 # Create your views here.
 
 def familiares(request):
@@ -13,10 +15,11 @@ def familiares(request):
     familiar2.save()
     familiar3.save()
     
-    cadena_texto="familiar 1: "+ familiar1.nombre +" "+ str(familiar1.dni)
+    datos= (familiar1.nombre)  + str ( familiar1.dni ) + str ( familiar1.fecha_nacimiento )
+    datos2=(familiar2.nombre)  +str(familiar2.dni) + str(familiar3.fecha_nacimiento)
+    datos3=(familiar3.nombre) +str (familiar3.dni) + str(familiar3.fecha_nacimiento)
 
-  
-    
-    
-    return render(request,"C:/Users/fede1/Desktop/mtvfederico/mvtfederico/mvtfederico/plantillas/template.html")
+    datos_totales=f"{datos} -- segundo familiar=  {datos2} -- terecer familiar=  {datos3}"
+     
+    return HttpResponse(datos_totales)  
 
