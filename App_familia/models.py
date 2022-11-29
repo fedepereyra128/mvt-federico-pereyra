@@ -11,4 +11,4 @@ class Familiares(models.Model):
 
 
     def __str__(self):
-        return self.nombre +" "+self.dni +" "+ self.fecha_nacimiento 
+        return self.nombre +" "+ str(self.dni) +" "+ str(self.fecha_nacimiento) 
