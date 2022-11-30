@@ -10,9 +10,9 @@ def familiares(request):
     
 
     
-    familiar1=Familiares(nombre="federico",dni=37682175 ,fecha_nacimiento="1993-04-15")
-    familiar2=Familiares(nombre="marta",dni=6543254 ,fecha_nacimiento="1993-01-10")
-    familiar3=Familiares(nombre="gaston",dni=55555555 ,fecha_nacimiento="1996-10-25")
+    familiar1=Familiares(nombre= "federico", dni = 37682175 , fecha_nacimiento= "1993-04-15" )
+    familiar2=Familiares(nombre= "marta" , dni = 6543254 , fecha_nacimiento = "1993-01-10" )
+    familiar3=Familiares(nombre= "gaston" , dni = 55555555 , fecha_nacimiento = "1996-10-25" )
     familiar1.save()
     familiar2.save()
     familiar3.save()
@@ -22,7 +22,7 @@ def familiares(request):
     template= Template(plantilla.read())
     plantilla.close()
 
-    contexto=Context({"persona1": familiar1 , "persona2": familiar2 , "persona3": familiar3})
+    contexto=Context({ "persona1" : familiar1 , "persona2" : familiar2 , "persona3" : familiar3})
 
     documento= template.render(contexto)
 
